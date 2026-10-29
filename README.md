@@ -12,11 +12,11 @@ This repo measures how often Google's open-weight **Gemma** invents package name
 
 | metric | value |
 |---|---|
-| model(s) | _from SUMMARY.md_ |
-| answers with at least one ghost package | _from SUMMARY.md_ |
-| unique package names that are ghosts | _from SUMMARY.md_ |
-| recently registered names (possible squats) | _from SUMMARY.md_ |
-| ghosts that came back when the prompt was re-asked | _from SUMMARY.md_ |
+| model | `gemma-4-31b-it` (Gemini API), 150 prompts, 29 Oct 2026 |
+| answers with at least one ghost package | 2 of 150 (1.3%): Python 0 of 100, JavaScript 2 of 50 (4%) |
+| unique package names that are ghosts | 3 of 145 seen across main runs + reruns (`number-to-words-indian`, `indian-number-to-words`, `@nodable/noble`) |
+| recently registered names (possible squats) | 0 |
+| ghosts that came back when the prompt was re-asked | `number-to-words-indian`: suggested 3 times in 4 tries of the same prompt |
 
 ## How the experiment works
 

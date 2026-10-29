@@ -22,7 +22,7 @@ ENV_FILES = [
     Path(r"C:\Users\ankit\hacktober-2026\.env"),
 ]
 
-MAX_CALLS = 400          # hard cap on generateContent requests, retries included, across all runs
+MAX_CALLS = 600          # hard cap on generateContent requests, retries included, across all runs
 MIN_INTERVAL_S = 4.5     # Gemma free tier is ~30 requests/min and ~15k tokens/min
 TEMPERATURE = 0.7
 MAX_OUTPUT_TOKENS = 1200
