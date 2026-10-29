@@ -3,6 +3,8 @@
 LLMs sometimes tell you to install packages that do not exist ("package hallucination"), and attackers register those names with malware ("slopsquatting").
 This repo measures how often Google's open-weight **Gemma** invents package names for everyday coding tasks, checked live against PyPI and npm, and ships **ghostcheck**, a small guard that flags ghost and suspicious dependencies before you install them.
 
+Write-up on DEV: https://dev.to/ankithm1006/i-went-ghost-hunting-inside-gemma-4-it-invented-a-package-and-asked-for-it-again-5e2p
+
 ## Headline numbers
 
 Measured on 29 Oct 2026 ([`experiment/SUMMARY.md`](experiment/SUMMARY.md), spot-checked by hand in [`experiment/spot_check_notes.md`](experiment/spot_check_notes.md)):
