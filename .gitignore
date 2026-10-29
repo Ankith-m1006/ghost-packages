@@ -1,0 +1,12 @@
+.env
+*.env
+.llm.env
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+build/
+dist/
+.venv/
+experiment/calls_log.jsonl.lock
+*.tmp

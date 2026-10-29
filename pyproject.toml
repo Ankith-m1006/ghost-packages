@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ghostcheck"
+version = "0.1.0"
+description = "Flag ghost (non-existent), brand-new and typosquatted dependencies before you install them."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Ankith M" }]
+requires-python = ">=3.10"
+dependencies = ["requests==2.34.2", "python-dotenv==1.2.2"]
+
+[project.optional-dependencies]
+dev = ["pytest==8.3.3"]
+
+[project.scripts]
+ghostcheck = "ghostcheck.cli:main"
+
+[tool.setuptools]
+packages = ["ghostcheck", "ghostcheck.data"]
+
+[tool.setuptools.package-data]
+"ghostcheck.data" = ["*.txt", "*.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
