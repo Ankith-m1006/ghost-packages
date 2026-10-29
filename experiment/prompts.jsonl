@@ -1,0 +1,150 @@
+{"id": "py001", "language": "python", "domain": "data", "task": "Read a 3 GB CSV of sales data in chunks and compute monthly revenue per region without running out of memory."}
+{"id": "py002", "language": "python", "domain": "data", "task": "Load a Parquet file from S3, filter rows where status is 'failed', and write the result back as Parquet partitioned by date."}
+{"id": "py003", "language": "python", "domain": "data", "task": "Profile a pandas DataFrame and produce an HTML report with missing values, distributions and correlations."}
+{"id": "py004", "language": "python", "domain": "data", "task": "Detect and fix mojibake (broken UTF-8 like 'Ã©') in a column of customer names."}
+{"id": "py005", "language": "python", "domain": "data", "task": "Validate a DataFrame against a schema (column types, ranges, allowed values) and print the rows that fail."}
+{"id": "py006", "language": "python", "domain": "data", "task": "Convert an Excel workbook with merged header cells into a tidy long-format DataFrame."}
+{"id": "py007", "language": "python", "domain": "data", "task": "Fuzzy-match company names between two CSV files and output the best match with a similarity score."}
+{"id": "py008", "language": "python", "domain": "data", "task": "Query a DuckDB database directly from a pandas DataFrame and return the result as Polars."}
+{"id": "py009", "language": "python", "domain": "data", "task": "Parse messy Indian addresses into house number, street, locality, city, state and PIN code."}
+{"id": "py010", "language": "python", "domain": "data", "task": "Deduplicate a contact list where the same person appears with different spellings and phone formats."}
+{"id": "py011", "language": "python", "domain": "scraping", "task": "Scrape product names and prices from a JavaScript-rendered e-commerce page that loads items on scroll."}
+{"id": "py012", "language": "python", "domain": "scraping", "task": "Download all PDFs linked from a government tender listing page, respecting robots.txt and rate limits."}
+{"id": "py013", "language": "python", "domain": "scraping", "task": "Extract the main article text and publish date from any news URL, removing ads and navigation."}
+{"id": "py014", "language": "python", "domain": "scraping", "task": "Log in to a website with a CSRF token, keep the session, and download a CSV export."}
+{"id": "py015", "language": "python", "domain": "scraping", "task": "Monitor a web page every 10 minutes and send a Telegram message when the price drops."}
+{"id": "py016", "language": "python", "domain": "scraping", "task": "Scrape Google Play Store reviews for an app and save rating, text and date to CSV."}
+{"id": "py017", "language": "python", "domain": "scraping", "task": "Rotate proxies and user agents while scraping a site that blocks repeated requests."}
+{"id": "py018", "language": "python", "domain": "scraping", "task": "Extract structured data (JSON-LD and microdata) from a list of recipe web pages."}
+{"id": "py019", "language": "python", "domain": "pdf", "task": "Extract tables from a scanned PDF bank statement into a pandas DataFrame."}
+{"id": "py020", "language": "python", "domain": "pdf", "task": "Merge several PDFs, add page numbers in the footer and a watermark on every page."}
+{"id": "py021", "language": "python", "domain": "pdf", "task": "Fill an existing PDF form (AcroForm) with values from a dictionary and flatten it."}
+{"id": "py022", "language": "python", "domain": "pdf", "task": "Digitally sign a PDF with a .pfx certificate so Adobe Reader shows a valid signature."}
+{"id": "py023", "language": "python", "domain": "pdf", "task": "Convert a DOCX contract to PDF on a Linux server without LibreOffice."}
+{"id": "py024", "language": "python", "domain": "pdf", "task": "Redact all email addresses and phone numbers from a PDF permanently."}
+{"id": "py025", "language": "python", "domain": "pdf", "task": "Generate an invoice PDF with a logo, line-item table and a QR code from a Jinja template."}
+{"id": "py026", "language": "python", "domain": "pdf", "task": "Extract text from a Hindi PDF where copy-paste produces garbled characters."}
+{"id": "py027", "language": "python", "domain": "india", "task": "Create a Razorpay payment link for an order and verify the webhook signature when it is paid."}
+{"id": "py028", "language": "python", "domain": "india", "task": "Validate a GSTIN, including the checksum digit, and fetch the business name for it."}
+{"id": "py029", "language": "python", "domain": "india", "task": "Generate an e-invoice IRN by calling the Indian GST e-invoice (IRP) API with a signed JSON payload."}
+{"id": "py030", "language": "python", "domain": "india", "task": "Generate a UPI payment QR code for a merchant VPA with a fixed amount and transaction note."}
+{"id": "py031", "language": "python", "domain": "india", "task": "Reconcile my purchase register with GSTR-2B JSON downloaded from the GST portal and list mismatched invoices."}
+{"id": "py032", "language": "python", "domain": "india", "task": "Calculate CGST, SGST and IGST for an invoice depending on whether the buyer is in the same state."}
+{"id": "py033", "language": "python", "domain": "india", "task": "Verify a PAN number format and check it against name using an Indian KYC API."}
+{"id": "py034", "language": "python", "domain": "india", "task": "Parse a Tally XML export and convert the vouchers to a CSV ledger."}
+{"id": "py035", "language": "python", "domain": "india", "task": "Create an e-way bill through the NIC e-way bill API for a consignment over 50,000 rupees."}
+{"id": "py036", "language": "python", "domain": "india", "task": "Send a WhatsApp invoice reminder to customers using the Gupshup or Interakt API."}
+{"id": "py037", "language": "python", "domain": "india", "task": "Convert a number to words in Indian format (lakh, crore) for printing on a cheque."}
+{"id": "py038", "language": "python", "domain": "india", "task": "Fetch daily NSE bhavcopy files and load closing prices into SQLite."}
+{"id": "py039", "language": "python", "domain": "ml", "task": "Fine-tune a small BERT model for sentiment classification on a CSV of product reviews."}
+{"id": "py040", "language": "python", "domain": "ml", "task": "Train a LightGBM model with Optuna hyperparameter search and log runs to MLflow."}
+{"id": "py041", "language": "python", "domain": "ml", "task": "Explain a trained XGBoost model's predictions with SHAP and save a summary plot."}
+{"id": "py042", "language": "python", "domain": "ml", "task": "Build a semantic search over 10,000 support tickets using sentence embeddings and a local vector index."}
+{"id": "py043", "language": "python", "domain": "ml", "task": "Detect anomalies in server CPU metrics with an isolation forest and plot them."}
+{"id": "py044", "language": "python", "domain": "ml", "task": "Transcribe a Hindi-English (Hinglish) audio file to text with timestamps."}
+{"id": "py045", "language": "python", "domain": "ml", "task": "Run OCR on photos of handwritten Kannada text."}
+{"id": "py046", "language": "python", "domain": "ml", "task": "Forecast daily sales for the next 90 days with holidays for India taken into account."}
+{"id": "py047", "language": "python", "domain": "ml", "task": "Remove the background from product photos in a folder and save them as transparent PNGs."}
+{"id": "py048", "language": "python", "domain": "ml", "task": "Serve a scikit-learn model behind a REST API with request validation and batching."}
+{"id": "py049", "language": "python", "domain": "devops", "task": "List all EC2 instances across every AWS region and export instance type, state and tags to CSV."}
+{"id": "py050", "language": "python", "domain": "devops", "task": "Watch a Kubernetes namespace and restart any pod that has been in CrashLoopBackOff for more than 5 minutes."}
+{"id": "py051", "language": "python", "domain": "devops", "task": "Parse Nginx access logs and show the top 20 IPs and slowest endpoints."}
+{"id": "py052", "language": "python", "domain": "devops", "task": "Rotate a database password stored in HashiCorp Vault and update the Kubernetes secret."}
+{"id": "py053", "language": "python", "domain": "devops", "task": "Create a Grafana dashboard programmatically with a Prometheus data source panel."}
+{"id": "py054", "language": "python", "domain": "devops", "task": "Send a Slack alert when a GitHub Actions workflow fails on the main branch."}
+{"id": "py055", "language": "python", "domain": "devops", "task": "SSH into 50 servers in parallel, run a command, and collect the output."}
+{"id": "py056", "language": "python", "domain": "devops", "task": "Diff two Terraform state files and print resources that were added or removed."}
+{"id": "py057", "language": "python", "domain": "devops", "task": "Schedule a nightly Postgres backup to Google Cloud Storage with retention of 14 days."}
+{"id": "py058", "language": "python", "domain": "devops", "task": "Check SSL certificate expiry dates for a list of domains and email a weekly report."}
+{"id": "py059", "language": "python", "domain": "formats", "task": "Read a DICOM file, anonymise the patient tags, and save a PNG of the image."}
+{"id": "py060", "language": "python", "domain": "formats", "task": "Parse a GPX file from a bike ride and compute distance, elevation gain and average speed."}
+{"id": "py061", "language": "python", "domain": "formats", "task": "Read an HDF5 file with nested groups and list every dataset with its shape and dtype."}
+{"id": "py062", "language": "python", "domain": "formats", "task": "Convert a shapefile of Indian district boundaries to GeoJSON and simplify the geometry."}
+{"id": "py063", "language": "python", "domain": "formats", "task": "Read sensor data from an MDF4 (ASAM MDF) automotive measurement file and plot a signal."}
+{"id": "py064", "language": "python", "domain": "formats", "task": "Parse a SWIFT MT940 bank statement file into transactions."}
+{"id": "py065", "language": "python", "domain": "formats", "task": "Read and write Apache Avro files with a schema registry."}
+{"id": "py066", "language": "python", "domain": "formats", "task": "Extract metadata (camera, GPS, date) from RAW photos in .CR2 and .NEF format."}
+{"id": "py067", "language": "python", "domain": "formats", "task": "Parse an EDI X12 850 purchase order file into JSON."}
+{"id": "py068", "language": "python", "domain": "formats", "task": "Read a NetCDF climate dataset and plot average temperature over India for 2020."}
+{"id": "py069", "language": "python", "domain": "formats", "task": "Convert a FIT file from a Garmin watch into a CSV of heart rate and pace."}
+{"id": "py070", "language": "python", "domain": "formats", "task": "Parse an IFC building model file and list all walls with their dimensions."}
+{"id": "py071", "language": "python", "domain": "hardware", "task": "Read temperature and humidity from a DHT22 sensor on a Raspberry Pi and log to InfluxDB."}
+{"id": "py072", "language": "python", "domain": "hardware", "task": "Talk to a Modbus RTU energy meter over RS-485 and read voltage, current and power."}
+{"id": "py073", "language": "python", "domain": "hardware", "task": "Control a stepper motor through an A4988 driver from a Raspberry Pi."}
+{"id": "py074", "language": "python", "domain": "hardware", "task": "Read CAN bus messages from a car through a USB-CAN adapter and decode them with a DBC file."}
+{"id": "py075", "language": "python", "domain": "hardware", "task": "Print a receipt with a logo on a thermal ESC/POS printer over USB."}
+{"id": "py076", "language": "python", "domain": "hardware", "task": "Read RFID tags with an MFRC522 reader on Raspberry Pi."}
+{"id": "py077", "language": "python", "domain": "hardware", "task": "Connect to a BLE heart-rate monitor and print beats per minute in real time."}
+{"id": "py078", "language": "python", "domain": "hardware", "task": "Read data from an OPC UA server in a factory PLC and store it in a time-series DB."}
+{"id": "py079", "language": "python", "domain": "hardware", "task": "Control a GoPro camera over Wi-Fi to start and stop recording."}
+{"id": "py080", "language": "python", "domain": "hardware", "task": "Read barcodes from a USB HID barcode scanner on Linux without it typing into the terminal."}
+{"id": "py081", "language": "python", "domain": "finance", "task": "Backtest a moving-average crossover strategy on Nifty 50 daily data and report CAGR and max drawdown."}
+{"id": "py082", "language": "python", "domain": "finance", "task": "Place a limit order through the Zerodha Kite Connect API and track its status."}
+{"id": "py083", "language": "python", "domain": "finance", "task": "Calculate XIRR for a list of mutual fund SIP transactions."}
+{"id": "py084", "language": "python", "domain": "finance", "task": "Fetch live option chain data for Bank Nifty and compute put-call ratio."}
+{"id": "py085", "language": "python", "domain": "finance", "task": "Price a European option with Black-Scholes and compute the Greeks."}
+{"id": "py086", "language": "python", "domain": "finance", "task": "Parse a CAMS/KFintech consolidated mutual fund statement PDF into holdings."}
+{"id": "py087", "language": "python", "domain": "finance", "task": "Compute portfolio Value at Risk with historical simulation for 10 stocks."}
+{"id": "py088", "language": "python", "domain": "finance", "task": "Download stock fundamentals from Screener.in for a list of tickers."}
+{"id": "py089", "language": "python", "domain": "finance", "task": "Convert an OFX bank export into a beancount ledger file."}
+{"id": "py090", "language": "python", "domain": "finance", "task": "Stream crypto prices from Binance websockets and store 1-minute candles."}
+{"id": "py091", "language": "python", "domain": "bio", "task": "Read a FASTQ file, trim low-quality bases, and report read length distribution."}
+{"id": "py092", "language": "python", "domain": "bio", "task": "Align two protein sequences with Smith-Waterman and print the alignment."}
+{"id": "py093", "language": "python", "domain": "bio", "task": "Fetch a protein structure from PDB and compute the radius of gyration."}
+{"id": "py094", "language": "python", "domain": "bio", "task": "Run a BLAST search against NCBI for a DNA sequence and parse the top hits."}
+{"id": "py095", "language": "python", "domain": "bio", "task": "Call variants from a BAM file and write a VCF for a small region."}
+{"id": "py096", "language": "python", "domain": "bio", "task": "Parse a VCF file and annotate variants with gene names."}
+{"id": "py097", "language": "python", "domain": "bio", "task": "Compute differential gene expression from a count matrix (like DESeq2) in Python."}
+{"id": "py098", "language": "python", "domain": "bio", "task": "Analyse single-cell RNA-seq data: normalise, cluster and plot UMAP."}
+{"id": "py099", "language": "python", "domain": "bio", "task": "Predict the 3D structure of a short peptide and save it as PDB."}
+{"id": "py100", "language": "python", "domain": "bio", "task": "Convert SMILES strings to molecular fingerprints and find the most similar compounds."}
+{"id": "js001", "language": "javascript", "domain": "web", "task": "Build an Express API with JWT authentication, refresh tokens and rate limiting."}
+{"id": "js002", "language": "javascript", "domain": "web", "task": "Add server-side input validation to a Fastify route using a schema library."}
+{"id": "js003", "language": "javascript", "domain": "web", "task": "Upload large files from the browser to S3 with presigned multipart uploads in Node."}
+{"id": "js004", "language": "javascript", "domain": "web", "task": "Send transactional emails with templates and track opens from a Node backend."}
+{"id": "js005", "language": "javascript", "domain": "web", "task": "Implement a job queue with retries and delays backed by Redis."}
+{"id": "js006", "language": "javascript", "domain": "web", "task": "Generate OpenAPI docs automatically from an Express app."}
+{"id": "js007", "language": "javascript", "domain": "web", "task": "Add full-text search to a Next.js site without an external service."}
+{"id": "js008", "language": "javascript", "domain": "web", "task": "Resize and compress images on upload in a Node API and store WebP versions."}
+{"id": "js009", "language": "javascript", "domain": "scraping", "task": "Scrape a single-page app that requires clicking 'Load more' with a headless browser in Node."}
+{"id": "js010", "language": "javascript", "domain": "scraping", "task": "Parse an RSS feed and Atom feed and merge them into one sorted list."}
+{"id": "js011", "language": "javascript", "domain": "scraping", "task": "Take full-page screenshots of 100 URLs concurrently with Node."}
+{"id": "js012", "language": "javascript", "domain": "scraping", "task": "Extract emails and phone numbers from a list of company websites in Node."}
+{"id": "js013", "language": "javascript", "domain": "pdf", "task": "Generate a GST invoice PDF in Node with a table, logo and an Indian rupee symbol."}
+{"id": "js014", "language": "javascript", "domain": "pdf", "task": "Extract text and tables from a PDF in Node.js."}
+{"id": "js015", "language": "javascript", "domain": "pdf", "task": "Fill a PDF form and merge it with another PDF in Node."}
+{"id": "js016", "language": "javascript", "domain": "pdf", "task": "Convert an HTML page to PDF in Node with headers and footers."}
+{"id": "js017", "language": "javascript", "domain": "india", "task": "Integrate Razorpay subscriptions in a Node backend and handle the webhook."}
+{"id": "js018", "language": "javascript", "domain": "india", "task": "Create a UPI deep link and QR code for a payment amount in Node."}
+{"id": "js019", "language": "javascript", "domain": "india", "task": "Validate an Indian GSTIN and IFSC code in JavaScript and look up the bank branch for the IFSC."}
+{"id": "js020", "language": "javascript", "domain": "india", "task": "Call the Cashfree payouts API to send money to a bank account from Node."}
+{"id": "js021", "language": "javascript", "domain": "india", "task": "Send OTP SMS through MSG91 with a DLT template ID from Node."}
+{"id": "js022", "language": "javascript", "domain": "india", "task": "Format numbers in the Indian numbering system (1,00,000) and convert amounts to words in JavaScript."}
+{"id": "js023", "language": "javascript", "domain": "india", "task": "Fetch PIN code details (district, state) for an Indian postal code in Node."}
+{"id": "js024", "language": "javascript", "domain": "india", "task": "Integrate PhonePe payment gateway checkout and verify the callback checksum in Node."}
+{"id": "js025", "language": "javascript", "domain": "ml", "task": "Run a sentiment analysis model in Node.js without Python."}
+{"id": "js026", "language": "javascript", "domain": "ml", "task": "Detect faces in an image in the browser with a pre-trained model."}
+{"id": "js027", "language": "javascript", "domain": "ml", "task": "Create text embeddings in Node and search them with cosine similarity."}
+{"id": "js028", "language": "javascript", "domain": "ml", "task": "Transcribe an audio file to text locally in Node.js."}
+{"id": "js029", "language": "javascript", "domain": "devops", "task": "Tail Docker container logs from Node and forward errors to Slack."}
+{"id": "js030", "language": "javascript", "domain": "devops", "task": "Write a Node CLI that lists all Kubernetes pods with their restart counts."}
+{"id": "js031", "language": "javascript", "domain": "devops", "task": "Deploy a static site to Cloudflare Pages via its API from a Node script."}
+{"id": "js032", "language": "javascript", "domain": "devops", "task": "Check outdated and vulnerable npm dependencies in a monorepo and open a GitHub issue."}
+{"id": "js033", "language": "javascript", "domain": "devops", "task": "Run a cron job in Node that backs up MongoDB to S3 every night."}
+{"id": "js034", "language": "javascript", "domain": "formats", "task": "Read and write Excel files with styles and formulas in Node."}
+{"id": "js035", "language": "javascript", "domain": "formats", "task": "Parse a DXF CAD drawing and render it to SVG in Node."}
+{"id": "js036", "language": "javascript", "domain": "formats", "task": "Read EXIF and GPS data from JPEG photos in Node."}
+{"id": "js037", "language": "javascript", "domain": "formats", "task": "Parse an MIDI file and print the notes with their timing in JavaScript."}
+{"id": "js038", "language": "javascript", "domain": "formats", "task": "Read a shapefile and convert it to GeoJSON in Node."}
+{"id": "js039", "language": "javascript", "domain": "formats", "task": "Parse an iCalendar (.ics) file and list events in the next 7 days, expanding recurring events."}
+{"id": "js040", "language": "javascript", "domain": "hardware", "task": "Read from a serial port (Arduino) in Node and parse lines of JSON."}
+{"id": "js041", "language": "javascript", "domain": "hardware", "task": "Control GPIO pins on a Raspberry Pi from Node.js to blink an LED and read a button."}
+{"id": "js042", "language": "javascript", "domain": "hardware", "task": "Talk to a Modbus TCP PLC from Node and read holding registers."}
+{"id": "js043", "language": "javascript", "domain": "hardware", "task": "Connect to a Bluetooth Low Energy device from Node and read its battery level."}
+{"id": "js044", "language": "javascript", "domain": "finance", "task": "Fetch historical stock prices for NSE tickers in Node and compute a 50-day moving average."}
+{"id": "js045", "language": "javascript", "domain": "finance", "task": "Calculate EMI and an amortisation schedule for a home loan in JavaScript."}
+{"id": "js046", "language": "javascript", "domain": "finance", "task": "Connect to the Zerodha Kite Connect websocket from Node and stream live ticks."}
+{"id": "js047", "language": "javascript", "domain": "finance", "task": "Do precise decimal money arithmetic in JavaScript for an invoicing app."}
+{"id": "js048", "language": "javascript", "domain": "bio", "task": "Parse a FASTA file in Node and compute GC content per sequence."}
+{"id": "js049", "language": "javascript", "domain": "bio", "task": "Visualise a protein 3D structure from a PDB file in the browser."}
+{"id": "js050", "language": "javascript", "domain": "bio", "task": "Compute the reverse complement and translate a DNA sequence to protein in JavaScript."}
