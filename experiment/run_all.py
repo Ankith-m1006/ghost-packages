@@ -4,6 +4,8 @@
 """
 from __future__ import annotations
 
+import os
+
 from . import analyze, generate, repeat, summarize
 from .common import load_models
 
@@ -13,7 +15,7 @@ def main() -> None:
     generate.run_model(models["primary"])          # 150 calls
     analyze.analyze()
     repeat.run_reruns(models["primary"])           # up to 20 x 3 calls
-    if models.get("secondary"):
+    if models.get("secondary") and os.environ.get("GP_SECONDARY") == "1":  # optional: slow, off by default
         generate.run_model(models["secondary"])    # up to 150 calls, stops at the cap
     analyze.analyze()
     repeat.score(load_models()["primary"])
