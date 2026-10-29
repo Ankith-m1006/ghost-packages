@@ -18,12 +18,12 @@ Measured on 29 Oct 2026 ([`experiment/SUMMARY.md`](experiment/SUMMARY.md), spot-
 ## How the experiment works
 
 1. **Prompts.** [`experiment/prompts.jsonl`](experiment/prompts.jsonl) has 150 realistic coding requests (100 Python, 50 JavaScript/Node) across data, scraping, PDFs, Indian payments/GST, ML, DevOps, niche file formats, hardware, finance and bioinformatics. Several are niche but real tasks, because that is where models invent things. Each prompt asks for code plus the exact `pip install` / `npm install` command.
-2. **Model.** The script lists the models on the Gemini API and picks the largest `gemma-3*-it` instruct model, plus the next size down for comparison (ids recorded in `experiment/models.json`). Temperature 0.7, at most 1,200 output tokens, 4.5 s between requests, and a hard cap of 400 API requests (retries included), logged in `experiment/calls_log.jsonl`.
+2. **Model.** The script lists the models on the Gemini API and picks the newest Gemma generation's largest instruct model; on 29 Oct 2026 that was `gemma-4-31b-it` (ids recorded in `experiment/models.json`). A second, smaller model can be added with `GP_SECONDARY=1`; it was not run for these numbers. Temperature 0.7, at most 1,200 output tokens, 4.5 s between requests, and a hard cap of 600 API requests (retries included), logged in `experiment/calls_log.jsonl`. The run used 264.
 3. **Extraction.** Every `import x`, `from x import`, `require('x')`, `import ... from 'x'`, `pip install ...` and `npm install ...` is parsed. Imports are read from code blocks only, so prose never turns into package names. Standard library modules (`sys.stdlib_module_names`) and Node built-ins are dropped, as are relative imports.
 4. **Live registry check.** Each unique name is looked up on the PyPI JSON API and the npm registry (at most 5 requests per second, cached in `experiment/registry_cache.json`). It records existence, first and latest release, number of releases, maintainers, and downloads (npm weekly downloads; pypistats monthly downloads only for young packages).
 5. **Classification (conservative).**
    - `GHOST`: the name a user would install returns **404**. For Python, that means a name on the `pip install` line. For JavaScript, it is the npm install name or the import specifier, which are the same thing on npm.
-   - `RECENTLY-REGISTERED`: the package exists, but it was first published after Gemma 3's knowledge cutoff (August 2024, per the model card) and has very little use (under 5,000 downloads a month on PyPI, under 1,000 a week on npm). The model could not have learned it, so it might be a squat. Every one of these gets checked by hand.
+   - `RECENTLY-REGISTERED`: the package exists, but it was first published in the last 12 months (we did not verify Gemma 4's training cutoff) and has very little use (under 5,000 downloads a month on PyPI, under 1,000 a week on npm). The model could not have learned it, so it might be a squat. Every one of these gets checked by hand.
    - `IMPORT-NAME-MISMATCH`: the import name and the install name differ but the install line is correct, for example `import cv2` with `pip install opencv-python`. **Not a ghost.**
    - `UNRESOLVED-IMPORT`: a Python import with no matching install name, where the import name is not on PyPI either. It could be a hallucinated module or a local file, so it is reported separately and **not** counted as a ghost.
 6. **Repeatability.** Up to 20 prompts that produced a ghost are asked 3 more times each. A ghost that comes back every time is the dangerous kind, because an attacker can predict it.
@@ -34,7 +34,7 @@ Measured on 29 Oct 2026 ([`experiment/SUMMARY.md`](experiment/SUMMARY.md), spot-
 ```bash
 pip install -r requirements.txt
 # put GEMINI_API_KEY=... in ./.env (git-ignored) or in your environment
-python -m experiment.run_all          # resumable; about 30 minutes with the free-tier rate limits
+python -m experiment.run_all          # resumable; about 1-2 hours with Gemma 4 31B on the free tier (20-40 s per answer, rate-limit retries)
 ```
 
 Or step by step: `python -m experiment.generate --list-models`, `python -m experiment.generate --model primary`, `python -m experiment.analyze`, `python -m experiment.repeat`, `python -m experiment.generate --model secondary`, `python -m experiment.analyze`, `python -m experiment.summarize`.
