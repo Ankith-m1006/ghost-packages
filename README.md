@@ -108,7 +108,7 @@ jobs:
         with:
           python-version: "3.12"
       - name: Install ghostcheck (from source, not PyPI)
-        run: pip install "git+https://github.com/OWNER/ghost-packages@main"   # replace OWNER, or pin a commit SHA
+        run: pip install "git+https://github.com/Ankith-m1006/ghost-packages@main"   # replace OWNER, or pin a commit SHA
       - name: Check changed dependency files
         run: |
           files=$(git diff --name-only "origin/${{ github.base_ref }}...HEAD" -- '*requirements*.txt' '*package.json' | grep -v node_modules || true)
