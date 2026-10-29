@@ -5,10 +5,7 @@ This repo measures how often Google's open-weight **Gemma** invents package name
 
 ## Headline numbers
 
-> **Not run yet.** The experiment code is complete and tested, but it has not been run in this
-> repo, so there are no numbers here yet. `python -m experiment.run_all` writes
-> [`experiment/SUMMARY.md`](experiment/SUMMARY.md); copy the headline figures from there into this
-> section. Every number must come from that file, exactly as measured.
+Measured on 29 Oct 2026 ([`experiment/SUMMARY.md`](experiment/SUMMARY.md), spot-checked by hand in [`experiment/spot_check_notes.md`](experiment/spot_check_notes.md)):
 
 | metric | value |
 |---|---|
