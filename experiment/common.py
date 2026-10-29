@@ -80,14 +80,15 @@ def _size_b(name: str) -> float:
 
 
 def choose_models(models: list[dict]) -> dict:
-    """Best gemma-3 instruct model (largest), plus the next size down for comparison."""
+    """Best Gemma instruct model (newest generation, then largest), plus the next one down for comparison."""
     gemma = []
     for m in models:
         name = m.get("name", "").removeprefix("models/")
-        if name.startswith("gemma-3") and name.endswith("-it") and "generateContent" in m.get("supportedGenerationMethods", []):
+        if re.match(r"gemma-\d", name) and name.endswith("-it") and "generateContent" in m.get("supportedGenerationMethods", []):
             gemma.append(name)
-    plain = sorted([g for g in gemma if not g.startswith("gemma-3n")], key=_size_b, reverse=True)
-    chosen = plain[:2] if plain else sorted(gemma, key=_size_b, reverse=True)[:2]
+    gen = lambda g: int(re.match(r"gemma-(\d+)", g).group(1))
+    plain = sorted([g for g in gemma if not re.match(r"gemma-\d+n", g)], key=lambda g: (gen(g), _size_b(g)), reverse=True)
+    chosen = plain[:2] if plain else sorted(gemma, key=lambda g: (gen(g), _size_b(g)), reverse=True)[:2]
     return {
         "listed_at": now_iso(),
         "all_gemma_models": sorted(m.get("name", "").removeprefix("models/") for m in models if "gemma" in m.get("name", "")),

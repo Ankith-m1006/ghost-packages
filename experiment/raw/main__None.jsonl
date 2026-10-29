@@ -1,0 +1,10 @@
+{"model": null, "prompt_id": "py001", "language": "python", "error": "HTTP 400: * GenerateContentRequest.model: unexpected model name format\n", "t": "2026-10-29T13:46:32Z"}
+{"model": null, "prompt_id": "py002", "language": "python", "error": "HTTP 400: * GenerateContentRequest.model: unexpected model name format\n", "t": "2026-10-29T13:46:36Z"}
+{"model": null, "prompt_id": "py003", "language": "python", "error": "HTTP 400: * GenerateContentRequest.model: unexpected model name format\n", "t": "2026-10-29T13:46:40Z"}
+{"model": null, "prompt_id": "py004", "language": "python", "error": "HTTP 400: * GenerateContentRequest.model: unexpected model name format\n", "t": "2026-10-29T13:46:45Z"}
+{"model": null, "prompt_id": "py005", "language": "python", "error": "HTTP 400: * GenerateContentRequest.model: unexpected model name format\n", "t": "2026-10-29T13:46:49Z"}
+{"model": null, "prompt_id": "py006", "language": "python", "error": "HTTP 400: * GenerateContentRequest.model: unexpected model name format\n", "t": "2026-10-29T13:46:54Z"}
+{"model": null, "prompt_id": "py007", "language": "python", "error": "HTTP 400: * GenerateContentRequest.model: unexpected model name format\n", "t": "2026-10-29T13:46:58Z"}
+{"model": null, "prompt_id": "py008", "language": "python", "error": "HTTP 400: * GenerateContentRequest.model: unexpected model name format\n", "t": "2026-10-29T13:47:03Z"}
+{"model": null, "prompt_id": "py009", "language": "python", "error": "HTTP 400: * GenerateContentRequest.model: unexpected model name format\n", "t": "2026-10-29T13:47:07Z"}
+{"model": null, "prompt_id": "py010", "language": "python", "error": "HTTP 400: * GenerateContentRequest.model: unexpected model name format\n", "t": "2026-10-29T13:47:12Z"}

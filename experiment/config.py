@@ -29,8 +29,9 @@ MAX_OUTPUT_TOKENS = 1200
 REPEAT_PROMPTS = 20
 REPEAT_TIMES = 3
 
-# Gemma 3 model card: "The knowledge cutoff date for the training data was August 2024."
-MODEL_KNOWLEDGE_CUTOFF = "2024-08-01"
+# The run uses Gemma 4, whose training cutoff we did not verify, so RECENTLY-REGISTERED uses
+# only the "first published in the last 12 months" window (a far-future cutoff never wins the min()).
+MODEL_KNOWLEDGE_CUTOFF = "2099-01-01"
 # RECENTLY-REGISTERED = exists, first published after the cutoff (or in the last 12 months,
 # whichever window is wider), AND low usage:
 RECENT_LOW_MONTHLY_PYPI = 5_000   # pypistats last_month

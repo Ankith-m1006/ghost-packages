@@ -77,3 +77,11 @@ def test_budget_stops_at_cap(tmp_path, monkeypatch):
     else:
         raise AssertionError("budget not enforced")
     assert common.Budget(limit=2).remaining() == 0  # persisted across runs
+
+
+def test_choose_models_prefers_newest_gemma_generation():
+    from experiment.common import choose_models
+    models = [{"name": "models/" + n, "supportedGenerationMethods": ["generateContent"]}
+              for n in ["gemma-3-27b-it", "gemma-4-26b-a4b-it", "gemma-4-31b-it", "gemini-2.5-flash"]]
+    info = choose_models(models)
+    assert info["primary"] == "gemma-4-31b-it" and info["secondary"] == "gemma-4-26b-a4b-it"

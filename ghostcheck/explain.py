@@ -5,7 +5,7 @@ from __future__ import annotations
 from .gemma import Gemma, GemmaError, load_key
 from .rules import Finding
 
-DEFAULT_MODEL = "gemma-3-27b-it"
+DEFAULT_MODEL = "gemma-4-31b-it"
 
 
 def build_prompt(findings: list[Finding]) -> str:
