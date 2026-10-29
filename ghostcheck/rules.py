@@ -46,8 +46,8 @@ def check_dependency(dep: Dependency, registry: Registry | None, now: datetime |
     ghost = llm_ghosts().get(key)
     if ghost:
         f(HIGH, "llm-ghost",
-          f"an LLM invents this name: in our experiment {ghost.get('model', 'Gemma')} suggested it "
-          f"({ghost.get('times', 1)}x) and it did not exist on {dep.ecosystem} on {ghost.get('checked', '?')}")
+          f"{ghost.get('model', 'Gemma')} invented this name in our experiment "
+          f"({ghost.get('times', 1)}x; not on {dep.ecosystem} on {ghost.get('checked', '?')})")
 
     info = registry.lookup(dep.name, dep.ecosystem) if registry else None
     reg = "PyPI" if dep.ecosystem == PYPI else "npm"
